@@ -170,7 +170,7 @@ internal sealed class ProfilesForm : Form
     private static FlowLayoutPanel ButtonRow(params Button[] buttons)
     {
         var panel = new FlowLayoutPanel { AutoSize = true, Dock = DockStyle.Fill, FlowDirection = FlowDirection.RightToLeft, Margin = new Padding(0, 4, 0, 0) };
-        panel.Controls.AddRange(buttons.Reverse().ToArray());
+        panel.Controls.AddRange(Enumerable.Reverse(buttons).ToArray());
         return panel;
     }
 }
