@@ -3,6 +3,13 @@
 Alle nennenswerten Änderungen an diesem Projekt. Format angelehnt an [Keep a Changelog](https://keepachangelog.com/de/1.1.0/),
 Versionierung nach [Semantic Versioning](https://semver.org/lang/de/).
 
+## [Unveröffentlicht]
+
+### Geändert
+
+- Projekt unter MIT-Lizenz gestellt
+- CI-Actions auf aktuelle Hauptversionen (Node 24) angehoben
+
 ## [1.0.0] – 2026-10-19
 
 ### Hinzugefügt

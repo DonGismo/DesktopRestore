@@ -13,6 +13,7 @@
   <img src="https://img.shields.io/badge/Windows-11-0078D4?logo=windows11" alt="Windows 11">
   <img src="https://img.shields.io/badge/.NET-9-512BD4?logo=dotnet" alt=".NET 9">
   <img src="https://img.shields.io/badge/Cloud-keine-success" alt="Keine Cloud">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/Lizenz-MIT-blue" alt="Lizenz: MIT"></a>
 </p>
 
 ---
@@ -33,6 +34,7 @@
 - [Entwicklung](#entwicklung)
 - [Releases und CI](#releases-und-ci)
 - [Datenschutz](#datenschutz)
+- [Lizenz](#lizenz)
 
 ---
 
@@ -371,8 +373,10 @@ klappt das am besten bei gleichem Benutzernamen bzw. gleichem Desktop-Pfad.
   oder Desktop-Tools wie Fences können die Positionen selbst verwalten und konkurrieren mit DesktopRestore.
 - Zwei baugleiche Monitore mit identischer Auflösung, Anordnung und Skalierung an verschiedenen Arbeitsplätzen
   ergeben denselben Fingerprint – das ist gewollt, die Layouts sind dann ohnehin austauschbar.
-- Bisher nur mit einzelnen Monitor-Konfigurationen getestet; Erfahrungsberichte mit Docking-Szenarien sind
-  willkommen.
+- Getestet unter Windows 11 mit Einzelmonitor und Dockingstation. Andere Konstellationen (mehrere Docks,
+  Beamer, RDP) sind noch wenig erprobt – Erfahrungsberichte und Issues sind willkommen.
+- MSI und EXE sind nicht digital signiert. Beim Download zeigt Windows SmartScreen deshalb
+  „Unbekannter Herausgeber“ an; über *Weitere Informationen → Trotzdem ausführen* lässt sich installieren.
 
 ## Entwicklung
 
@@ -481,3 +485,16 @@ Die Version muss dem MSI-Schema `Major.Minor.Build` entsprechen (Major/Minor ≤
 DesktopRestore arbeitet ausschließlich lokal. Es werden keine Daten übertragen, es gibt keine Telemetrie,
 keine Update-Prüfung und keine Cloud-Anbindung. Gespeichert werden nur Monitor-Kenndaten sowie Pfade und
 Positionen der Desktop-Icons im eigenen Benutzerprofil.
+
+## Lizenz
+
+DesktopRestore steht unter der [MIT-Lizenz](LICENSE) – Nutzung, Änderung und Weitergabe sind frei, auch
+kommerziell, solange der Copyright-Hinweis erhalten bleibt. Die Software wird ohne Gewährleistung bereitgestellt.
+
+Verwendete Komponenten:
+
+| Komponente | Verwendung | Lizenz |
+|---|---|---|
+| [.NET Runtime / Windows Forms](https://github.com/dotnet/runtime) | in der EXE enthalten | MIT |
+| [WiX Toolset](https://github.com/wixtoolset/wix) | Bau des Installers | MS-RL |
+| [xUnit](https://github.com/xunit/xunit) | nur Tests | Apache-2.0 |
