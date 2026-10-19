@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <ApplicationIcon>..\..\assets\app.ico</ApplicationIcon>
+    <AssemblyName>DesktopRestore</AssemblyName>
+    <RootNamespace>DesktopRestore.App</RootNamespace>
+    <AssemblyTitle>DesktopRestore</AssemblyTitle>
+    <Description>Speichert und stellt die Desktop-Icon-Anordnung pro Arbeitsplatz wieder her.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\assets\app.ico" LogicalName="app.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DesktopRestore.Core\DesktopRestore.Core.csproj" />
+  </ItemGroup>
+
+</Project>

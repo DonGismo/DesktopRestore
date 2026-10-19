@@ -1,0 +1,16 @@
+<Project Sdk="WixToolset.Sdk/5.0.2">
+
+  <PropertyGroup>
+    <OutputName>DesktopRestore-$(Version)</OutputName>
+    <InstallerPlatform>x64</InstallerPlatform>
+    <!-- ICE91: bei reiner Per-User-Installation erwartet -->
+    <SuppressIces>ICE91</SuppressIces>
+    <AppPublishDir Condition="'$(AppPublishDir)' == ''">$(MSBuildThisFileDirectory)..\..\artifacts\publish</AppPublishDir>
+    <DefineConstants>AppPublishDir=$(AppPublishDir);ProductVersion=$(Version);AssetsDir=$(MSBuildThisFileDirectory)..\..\assets</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="WixToolset.Util.wixext" Version="5.0.2" />
+  </ItemGroup>
+
+</Project>
